@@ -31,8 +31,8 @@ type (
 
 	// Class ....
 	Class struct {
-		Identifier string   `bson:"id"`
-		Comments   []string `bson:"comments"`
+		ID       string   `bson:"id"`
+		Comments []string `bson:"comments"`
 	}
 )
 
@@ -53,5 +53,5 @@ func (t Discipline) ToString() string {
 
 // ToString ...
 func (t Class) ToString() string {
-	return fmt.Sprintf("Class[ID: %s, Name: %s]", t.Identifier, t.Comments)
+	return fmt.Sprintf("Class[ID: %s, Name: %s]", t.ID, t.Comments)
 }
