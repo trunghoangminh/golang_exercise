@@ -1,10 +1,8 @@
-package main
+package repositories
 
 import (
 	"database/sql"
-	"log"
 
-	"github.com/trunghoangminh/schoolmanagement/database"
 	"github.com/trunghoangminh/schoolmanagement/models"
 )
 
@@ -51,16 +49,4 @@ func (studentRepos StudentRepository) Update(student models.Student) error {
 func (studentRepos StudentRepository) Delete(id string) error {
 	_, err := studentRepos.db.Query("DELETE  FROM Student WHERE id=?", id)
 	return err
-}
-
-func main() {
-	db, err := database.ConnectMySQLDB()
-
-	if err != nil {
-		log.Fatal(err)
-	}
-	studentRepository := StudentRepository{db}
-	student := models.Student{"51303198", "Hoang Minh Trung", "1350301", []string{"123,456"}, []string{"123", "456"}}
-	studentRepository.Add(student)
-
 }

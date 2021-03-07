@@ -5,34 +5,34 @@ import "fmt"
 type (
 	// Student ...
 	Student struct {
-		ID       string   `json:"id"`
-		Name     string   `json:"name"`
-		Class    string   `json:"class"`
-		Teachers []string `json:"teachers"` // TODO use Set
-		Comments []string `json:"comments"`
+		ID       string `json:"id"`
+		Name     string `json:"name"`
+		Class    string `json:"class"`
+		Teachers string `json:"teachers"` // TODO use Set
+		Comments string `json:"comments"`
 	}
 
 	// Teacher ...
 	Teacher struct {
-		ID          string   `json:"id"`
-		Name        string   `json:"name"`
-		Disciplines []string `json:"disciplines"` // TODO use Set
-		Comments    []string `json:"comments"`
+		ID          string `json:"id"`
+		Name        string `json:"name"`
+		Disciplines string `json:"disciplines"` // TODO use Set
+		Comments    string `json:"comments"`
 	}
 
 	// Discipline ...
 	Discipline struct {
-		ID               string   `json:"id"`
-		Name             string   `json:"name"`
-		NumberOfLecture  int      `json:"numberoflecture"`
-		NumberOfExercise int      `json:"numberofexercise"`
-		Comments         []string `json:"comments"`
+		ID               string `json:"id"`
+		Name             string `json:"name"`
+		NumberOfLecture  int    `json:"numberoflecture"`
+		NumberOfExercise int    `json:"numberofexercise"`
+		Comments         string `json:"comments"`
 	}
 
 	// Class ....
 	Class struct {
-		ID       string   `json:"id"`
-		Comments []string `json:"comments"`
+		ID       string `json:"id"`
+		Comments string `json:"comments"`
 	}
 )
 
